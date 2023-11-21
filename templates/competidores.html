@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/cadastro.css">
+    <title>Lista de Competidores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Competidores</h1>
+
+
+ <a href="/cadastro">
+
+     <i class="fa-solid fa-arrow-left"></i>
+ </a>
+
+
+
+    <ul>
+        {% for competidor in competidores %}
+            <li class="img">
+                <div class="texto-competidor">
+                    <strong>Nome:</strong> {{ competidor['nome'] }}<br>
+                    <strong>Jogo:</strong> {{ competidor['jogo'] }}<br>
+                    <strong>Posição no Jogo:</strong> {{ competidor['posicao'] }}<br>
+                    <strong>Ranking:</strong> {{ competidor['ranking'] }}<br>
+                </div>
+                <img class="img-game" src="/static/img/{{ competidor['jogo'] }}.png" />
+            </li>
+        {% endfor %}
+    </ul>
+
+    <script src="https://kit.fontawesome.com/745475d31b.js" crossorigin="anonymous"></script>
+</body>
+</html>

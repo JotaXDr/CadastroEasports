@@ -1,0 +1,100 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: cadetblue;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: purple;
+            color: #fff;
+            cursor: pointer;
+        }
+        .img{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+ .button {
+     display: block;
+     margin: 0 auto;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: blueviolet;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid blueviolet;
+}
+
+button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: blueviolet;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+.img-game{
+   width: 200px;
+    height: 190px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+.img-game:hover{
+     width: 250px; /* Nova largura ao passar o mouse */
+            height: 240px; /* Nova altura ao passar o mouse */
+}
+.texto-competidor{
+    font-size: 30px;
+}
+.fa-solid fa-arrow-left{
+    width: 50px;
+}
